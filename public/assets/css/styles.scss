@@ -1,0 +1,100 @@
+body{
+    min-width: 600px;
+    height: 100vh;
+}
+
+h1, h2, h3, p{
+    font-family: Arial;
+}
+
+header{
+    background-color: white;
+    padding: 1em;
+
+    & h1{
+        display: block;
+        font-size: 2em;
+        margin-bottom: 1rem;
+        padding-top: 1rem;
+        margin-left: 1em;
+    }
+
+    & h2{
+        display: block;
+        margin: auto;
+        margin-bottom: 1rem;
+        margin-left: 2em;
+    }
+}
+
+.burger-list-container{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
+    padding: 1em;
+
+    & h3{
+        font-weight: bold;
+    }
+}
+
+.user-container{
+    display: grid;
+    grid-template-areas:
+    'l r';
+    grid-template-columns: 1fr 1fr;
+    padding: 1em;
+
+    & .burger-list-container{
+        grid-area: l;
+    }
+
+    & .eaten-container{
+        grid-area: r;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        border-radius: 10px;
+        margin-left: 1em;
+        padding: 1em;
+
+        & h3{
+            font-weight: bold;
+        }
+    }
+}
+
+.form-container{
+    margin: auto;
+}
+
+.request-burger{
+    font-family: Arial;
+    margin-right: 1em;
+}
+
+.burger-form{
+    margin-left: 1em;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 450px;
+    padding: .25em;
+    border-radius: 10px;
+
+    & label{
+        margin-left: 1em;
+    }
+
+    & .form-control{
+        height: 20px;
+        font-size: 15px;
+        border-radius: 10px;
+        padding: 5px;
+    }
+}
+
+.burger-list{
+    padding: 10px;
+    font-family: Arial;
+    list-style-type: none;
+    text-decoration: none;
+}

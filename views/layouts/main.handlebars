@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eat-Da-Burger!</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body style="
+    background-image: url(assets/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+  ">
+
+<header>
+  <h1>Eat-Da-Burger!</h1>
+  <h2>Choose from one of the burgers below or add your own.</h2>
+</header>
+
+<div class="body-container">
+  {{{body}}}
+</div>
+
+<form action="burger/create" method="POST">
+  <div class="form-container">
+    <div class="burger-form">
+      <label for="new_burger" class="request-burger">Request a new burger: </label>
+      <input type="text" class="form-control" type="text" name="burger_name"></input>
+      <button id="submit-button" type="submit" class="btn btn-danger">✓</button>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+ <div class="user-container">
+    <div class="burger-list-container">
+      <h3 >Burgers Available: </h3>
+      <div id="burgersAvailable">
+        {{#each burgers}}
+          {{#unless devoured}}
+          <form action="burger/eat/{{id}}" method="POST">
+            <div class="input-group">
+              <li class="form-control burger-list">{{id}}. {{burger_name}}</li>
+                <span class="input-group-btn">
+                  <button class="eat-burger" type="submit">Eat It!</button>
+                </span>
+            </div>
+          </form>
+          {{/unless}}
+        {{/each}}
+    </div>
+    </div>
+    <div class="eaten-container">
+      <h3>Burgers Eaten: </h3>
+      <div id="already-eaten">
+        {{#each burgers}}
+          {{#if this.devoured}}
+            <div class="input-group">
+              <li class="form-control">{{this.id}}. {{this.burger_name}}</li>
+            </div>
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+</div>
+
